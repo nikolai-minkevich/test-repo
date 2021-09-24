@@ -6,11 +6,11 @@ import './App.css';
 
 function App() {
   return (
-    <HashRouter>
+    <HashRouter baseurl='test-repo/build'>
     <Switch>
-    <Route path={process.env.PUBLIC_URL + '/'} component={Home} />
-    <Route path={process.env.PUBLIC_URL + '/home'} component={Home} />
-    <Route path={process.env.PUBLIC_URL + "/garage"} component={Garage} />
+    <Route path='/' component={Home} />
+    <Route path='/home' component={Home} />
+    <Route path="/garage" component={Garage} />
     <Redirect to='/' />
     </Switch>
       </HashRouter>
