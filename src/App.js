@@ -1,4 +1,4 @@
-import { BrowserRouter as HashRouter, Switch, Route , Redirect} from "react-router-dom";
+import { BrowserRouter, Switch, Route , Redirect} from "react-router-dom";
 import Home from "./components/Home";
 import Garage from "./components/Garage";
 
@@ -6,14 +6,14 @@ import './App.css';
 
 function App() {
   return (
-    <HashRouter>
+    <BrowserRouter>
     <Switch>
     <Route path={process.env.PUBLIC_URL + '/'} component={Home} />
-    <Route path={process.env.PUBLIC_URL + '/#home'} component={Home} />
-    <Route path={process.env.PUBLIC_URL + "/#garage"} component={Garage} />
+    <Route path={process.env.PUBLIC_URL + '/home'} component={Home} />
+    <Route path={process.env.PUBLIC_URL + "/garage"} component={Garage} />
     <Redirect to='/' />
     </Switch>
-      </HashRouter>
+      </BrowserRouter>
   );
 }
 
