@@ -8,8 +8,8 @@ function App() {
   return (
     <HashRouter>
     <Switch>
-    <Route exact  path="/" component={Home} />
-    <Route exact  path="/garage" component={Garage} />
+    <Route exact  path={process.env.PUBLIC_URL + '/'} component={Home} />
+    <Route exact  path={process.env.PUBLIC_URL + "/garage"} component={Garage} />
     <Redirect to='/' />
     </Switch>
       </HashRouter>
