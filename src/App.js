@@ -7,14 +7,7 @@ import './App.css';
 function App() {
 
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
-    <Switch>
-    <Route exact path='/' component={Home} />
-    <Route exact path='/home' component={Home} />
-    <Route exact path="/garage" component={Garage} />
-    <Redirect to='/' />
-    </Switch>
-      </BrowserRouter>
+<><h1>its apps</h1></>
   );
 }
 

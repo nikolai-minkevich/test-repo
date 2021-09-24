@@ -2,11 +2,21 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import { BrowserRouter, Switch, Route , Redirect } from "react-router-dom";
+import Home from "./components/Home";
+import Garage from "./components/Garage";
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
+          <Switch>
+          <Route exact path='/' component={Home} />
+          <Route exact path='/home' component={Home} />
+          <Route exact path="/garage" component={Garage} />
+          <Redirect to='/' />
+          </Switch>
+      </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
